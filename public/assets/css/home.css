@@ -1,0 +1,332 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header_text {
+    position: absolute;
+    top: 20%;
+    left: 9%;
+
+    text-align: center;
+    color: #464255;
+    width: 49%;
+    text-align: left;
+}
+
+h1 {
+    font-weight: 700 !important;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    height: 3.2rem;
+    width: 99%;
+    top: 20px;
+    /* min-width: 200px;
+max-width: 250px; */
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input {
+    height: 73%;
+    width: 78%;
+    border-radius: 8px;
+    border: 1px solid rgb(176, 190, 197, 0.5);
+    background-color: transparent;
+    padding: 0.625rem 70px 0.625rem 0.75rem;
+    padding-left: 2.2rem;
+    margin-top: 6px;
+    margin-left: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    outline: none;
+}
+
+.input-container input:focus {
+    border: 1px solid rgb(236 72 153);
+}
+
+.invite-btn {
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    right: 4px;
+    top: 8px;
+    bottom: 8px;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: #f5a201;
+    color: #fff;
+    padding-top: 0.25rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 550;
+    border: none;
+    transition: 0.6s ease;
+}
+
+.input-container input:placeholder-shown ~ .invite-btn {
+    background-color: #f58201;
+}
+
+.input-container input:placeholder-shown ~ .invite-btn:hover {
+    color: #464255;
+}
+
+.email-icon {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f58201;
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card {
+    text-align: center;
+    border: none !important;
+    transition: transform 0.3s;
+}
+
+/* .card:hover {
+    transform: translateY(-10px);
+} */
+
+.section-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h6 {
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.custom-section {
+    background-color: #f58201;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.custom-image {
+    position: absolute;
+    top: -50%;
+    right: -3%;
+    max-width: 48%;
+    height: auto;
+}
+
+.playstore-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 0.625rem 1.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    outline: 0;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.playstore-button:hover {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.text-1 {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.text-2 {
+    font-weight: 600;
+}
+
+.blog {
+    background-image: url("{{ asset('assets/img/bg_blog.png') }}");
+    background-size: cover;
+    margin-top: 9rem;
+    padding-bottom: 90px;
+}
+
+.blog h2 {
+    color: whitesmoke;
+    font-weight: 700;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 24px;
+    border: 1.5px solid whitesmoke;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button:hover {
+    color: #2d2d2d;
+    border: 1.5px solid whitesmoke;
+}
+
+.button:hover:before {
+    top: -35%;
+    background-color: whitesmoke;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+    top: -45%;
+    background-color: whitesmoke;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+@media screen and (max-width: 760px) {
+    header {
+        height: 445px;
+    }
+
+    h1 {
+        margin-bottom: 0rem !important;
+    }
+
+    .header_text {
+        top: 12%;
+        width: 54%;
+    }
+
+    .input-container {
+        width: 150%;
+    }
+
+    header img {
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .section-header h1 {
+        font-size: 2rem;
+    }
+
+    .custom-image {
+        top: -36%;
+        right: -5%;
+        max-width: 44%;
+    }
+
+    .custom-section {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .pocket-text {
+        width: 100% !important;
+    }
+
+    .playstore-button {
+        display: inline-grid;
+    }
+
+    .playstore-button .icon {
+        margin-left: 30px;
+    }
+
+    .playstore-button.apple {
+        margin-left: 2.5rem;
+    }
+
+    .texts {
+        margin-left: 0rem;
+        align-items: center;
+    }
+
+    .blog {
+        margin-top: 4rem;
+    }
+
+    .blog h2 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
